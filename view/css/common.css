@@ -1,0 +1,32 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color:#FEFFDF;
+}
+.nav{
+    background-color: #DDE0AB;
+    padding-left: 0px;
+    margin-top: 10px;
+}
+aside{
+    width: 100px;
+    background-color: #DDE0AB;
+    position: absolute;
+    padding-top:80px;
+    top:50px;
+    bottom: 0px;
+    text-align: center;
+}
+aside .f{
+    background-color: rgb(51, 122, 183);
+    /* text-align: center; */
+    height: 40px;
+    line-height: 40px;
+}
+aside .c{
+    /* text-align: center; */
+    height: 50px;
+    line-height: 30px;
+}
