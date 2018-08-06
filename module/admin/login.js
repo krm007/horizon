@@ -1,3 +1,4 @@
+const md5 = require('md5');
 module.exports = function () {
     let router = express.Router();
     //展示登录页面
