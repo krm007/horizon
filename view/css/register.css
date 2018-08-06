@@ -1,0 +1,16 @@
+body{
+    background-image: url(/image/stock-photo-198664175.jpg);
+    background-size: cover;
+}
+.surface{
+    text-align: center;
+    width: 600px;
+    margin: 0 auto;
+    margin-top: 200px;
+    background-color: rgba(254, 255, 223, 0.6);
+    padding: 30px
+}
+
+.surface input{
+    /* width: 400px */
+}
