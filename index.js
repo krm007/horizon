@@ -2,7 +2,7 @@ const fs = require('fs');
 const path = require('path');
 const express = require('express');
 const mysql = require('mysql');
-const ejs = require('ejs');
+global.ejs = require('ejs');
 const md5 = require('md5');
 const svgCaptcha = require('svg-captcha');
 const bodyParser = require('body-parser');
@@ -100,9 +100,8 @@ server.post('/upload', upload.array('editimages'), (req, res) => {
 
 
 //客户端路由
-
-
-
+// 首页
+server.use('/',require('./module/index')())
 
 // 静态资源托管
 server.use('/uploads', express.static('uploads'));
@@ -110,7 +109,7 @@ server.use(express.static('view'));
 
 //404处理：样式自定义
 server.use((req ,res)=>{
-    res.send('你访问的路径不存在');
+    res.render('nopage')
 });
 
 // 端口号
