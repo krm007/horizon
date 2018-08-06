@@ -1,0 +1,18 @@
+body{
+    background-image: url(../image/abg.jpg);
+    background-size: cover;
+}
+ body h1{
+    margin-left: 50px;
+    font-weight: 900;
+}
+#bigdiv input{
+    width: 80%;
+}
+
+#bigdiv{
+    width: 40%;
+    height: 300px;
+    background-color: rgba(124, 117, 117, 0.5);
+    margin: 200px 100px;
+}
