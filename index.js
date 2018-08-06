@@ -1,10 +1,10 @@
 const fs = require('fs');
 const path = require('path');
-const express = require('express');
+global.express = require('express');
 const mysql = require('mysql');
-const ejs = require('ejs');
-const md5 = require('md5');
-const svgCaptcha = require('svg-captcha');
+global.ejs = require('ejs');
+global.md5 = require('md5');
+global.svgCaptcha = require('svg-captcha');
 const bodyParser = require('body-parser');
 const cookieParser = require('cookie-parser');
 const session = require('express-session');
@@ -75,8 +75,15 @@ server.use(bodyParser.urlencoded({
     extended: true
 }));
 
-//管理员界面路由
 
+
+//管理员界面路由
+//实现管理员登录
+server.use('/admin/login',require('./module/admin/login')());
+//作品的分类信息
+server.use('/admin/work',require('./module/admin/work')());
+//用户上传的文件信息
+// server.use('/admin/post',require('./module/admin/post')());
 
 
 //公用的上传文件的upload，接收批量上传图片

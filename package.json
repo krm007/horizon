@@ -9,7 +9,6 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-
   "repository": {
     "type": "git",
     "url": "git+https://github.com/krm007/horizon.git"
@@ -18,7 +17,6 @@
     "url": "https://github.com/krm007/horizon/issues"
   },
   "homepage": "https://github.com/krm007/horizon#readme",
-
   "dependencies": {
     "body-parser": "^1.18.3",
     "cookie-parser": "^1.4.3",
