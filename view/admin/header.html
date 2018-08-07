@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>视野</title>
+    <link rel="stylesheet" href="/layui/css/layui.css">
+    <link rel="stylesheet" href="/css/common.css">
+</head>
+
+<body class="layui-layout-body">
+    <div class="layui-layout layui-layout-admin">
+        <div class="layui-header">
+            <div class="layui-logo">视野--后台管理</div>
+            <!-- 头部区域（可配合layui已有的水平导航） -->
+            <ul class="layui-nav layui-layout-left">
+                <li class="layui-nav-item">
+                    <a href="">控制台</a>
+                </li>
+            </ul>
+            <ul class="layui-nav layui-layout-right">
+                <li class="layui-nav-item">
+                    <a href="javascript:;">
+                        <img src="/image/ahead.jpeg" class="layui-nav-img"> 我
+                    </a>
+                    <dl class="layui-nav-child">
+                        <dd>
+                            <a href="#">修改密码</a>
+                        </dd>
+                        <dd>
+                            <a href="/admin/login/logout">退出登录</a>
+                        </dd>
+                    </dl>
+                </li>
+            </ul>
+        </div>
+        
+        <div class="layui-side layui-bg-black">
+            <div class="layui-side-scroll">
+                <!-- 左侧导航区域（可配合layui已有的垂直导航） -->
+                <ul class="layui-nav layui-nav-tree" lay-filter="test">
+                    <li class="layui-nav-item layui-nav-itemed">
+                        <a class="" href="#">分类管理</a>
+                        <dl class="layui-nav-child">
+                            <dd>
+                                <a href="/admin/work/addwork">添加分类</a>
+                            </dd>
+                            <dd>
+                                <a href="/admin/work">修改分类</a>
+                            </dd>
+                            <dd>
+                                <a href="/admin/work">删除分类</a>
+                            </dd>
+                        </dl>
+                    </li>
+                    <li class="layui-nav-item">
+                        <a href="javascript:;">作品管理</a>
+                        <dl class="layui-nav-child">
+                            <dd>
+                                <a href="javascript:;">添加作品</a>
+                            </dd>
+                            <dd>
+                                <a href="javascript:;">删除作品</a>
+                            </dd>
+                        </dl>
+                    </li>
+                    <li class="layui-nav-item">
+                        <a href="javascript:;">公告信息</a>
+                        <dl class="layui-nav-child">
+                            <dd>
+                                <a href="javascript:;">添加公告</a>
+                            </dd>
+                            <dd>
+                                <a href="javascript:;">修改公告</a>
+                            </dd>
+                            <dd>
+                                <a href="javascript:;">删除公告</a>
+                            </dd>
+                        </dl>
+                    </li>
+                </ul>
+            </div>
+        </div>

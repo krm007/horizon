@@ -1,3 +1,4 @@
+const md5 = require('md5');
 module.exports = function () {
     let router = express.Router();
     //展示登录页面
@@ -31,6 +32,13 @@ module.exports = function () {
                 res.json({ r: 'ok' });
             });
         });
+    });
+
+    //退出登录
+    router.get('/logout',(req,res)=>{
+        //清除session信息，跳转登录页面
+        delete req.session.aid;
+        res.redirect('/admin/login');
     });
 
     return router;

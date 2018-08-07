@@ -5,28 +5,25 @@
 body{
     background-color:#FEFFDF;
 }
-.nav{
-    background-color: #DDE0AB;
-    padding-left: 0px;
+.layui-bg-green li{
+    list-style: none;
+    display: inline-block;
+}
+.layui-nav{
+    height: 40px;
+    font-size: 25px;
+}
+
+#addwork{
     margin-top: 10px;
 }
-aside{
-    width: 100px;
-    background-color: #DDE0AB;
-    position: absolute;
-    padding-top:80px;
-    top:50px;
-    bottom: 0px;
-    text-align: center;
+
+#addwork label{
+    size: 1
 }
-aside .f{
-    background-color: rgb(51, 122, 183);
-    /* text-align: center; */
-    height: 40px;
-    line-height: 40px;
+.layui-form-label{
+    width: 30px;
 }
-aside .c{
-    /* text-align: center; */
-    height: 50px;
-    line-height: 30px;
+.layui-btn{
+    padding: 0 150px;
 }

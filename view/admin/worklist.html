@@ -1,82 +1,45 @@
-<!DOCTYPE html>
-<html lang="zh-CN">
-
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>作品分类信息</title>
-
-    <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="../css/common.css">
-</head>
-
-<body>
-    <!-- 导航信息 -->
-    <ul class="nav nav-pills ">
-
-        <li role="presentation" class="dropdown active">
-            <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
-                管理中心
-                <span class="caret"></span>
-            </a>
-            <ul class="dropdown-menu">
-                <li>
-                    <a href="##">修改密码</a>
-                </li>
-                <li>
-                    <a href="##">退出登陆</a>
-                </li>
-            </ul>
-        </li>
-
-    </ul>
-    <!-- 导航信息 -->
-    <!-- 侧边导航  start -->
-    <aside class="H4-left">
-        <ul class="menu">
-            <li class="f">精选模块</li>
-            <li class="c">
-                <ul>
-                    <li>
-                        <a href="#">分类添加</a>
-                    </li>
-                    <li>
-                        <a href="#">分类管理</a>
-                    </li>
+<% include header.html %> 
+        <!-- 内容区域 -->
+        <div class="layui-body">
+            <!-- 内容主体区域 -->
+            <div style="padding: 15px;">
+                <ul class="layui-nav layui-bg-green" >
+                    <li>首页</li><span>>>>></span>
+                    <li>分类管理</li>
                 </ul>
-            </li>
-        </ul>
+                <!-- 表格区域   -->
+                <table class="layui-table">
+                    <colgroup>
+                      <col width="150">
+                      <col width="200">
+                      <col>
+                    </colgroup>
+                    <thead>
+                      <tr>
+                        <th>序号</th>
+                        <th>名称</th>
+                        <th>添加时间</th>
+                        <th>操作</th>
+                      </tr> 
+                    </thead>
+                    <tbody>
+                      <%
+                      let n=0 
+                      for(let w of worklist){
+                        n++;  
+                        %>
+                      <tr>
+                        <td><%=n%></td>
+                        <td><%=w.wname%></td>
+                        <td><%=w.addtime.toLocaleString()%></td>
+                        <td><a href="javascript:void(0)" class="del" wid="<%=w.wid%>">删除</a>
+                            |
+                            <a href="/admin/work/update?wid=<%=w.wid%>">修改</a></td>
+                      </tr>
+                      <%}%>
+                    </tbody>
+                  </table>
+            </div>
+        </div>
 
-        <ul class="menu">
-            <li class="f">作品展示</li>
-            <li class="c">
-                <ul>
-                    <li>
-                        <a href="#">分类添加</a>
-                    </li>
-                    <li>
-                        <a href="#">分类管理</a>
-                    </li>
-                </ul>
-            </li>
-        </ul>
-        <ul class="menu">
-            <li class="f">公告信息</li>
-            <li class="c">
-                <ul>
-                    <li>
-                        <a href="##">添加公告</a>
-                    </li>
-                    <li>
-                        <a href="##">管理公告</a>
-                    </li>
-                </ul>
-            </li>
-        </ul>
-    </aside>
-    <script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
-    <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-</body>
-
-</html>
+ <% include footer.html %> 
