@@ -34,5 +34,12 @@ module.exports = function () {
         });
     });
 
+    //退出登录
+    router.get('/logout',(req,res)=>{
+        //清除session信息，跳转登录页面
+        delete req.session.aid;
+        res.redirect('/admin/login');
+    });
+
     return router;
 }

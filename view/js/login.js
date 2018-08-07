@@ -27,7 +27,7 @@ function login() {
             data: $('#loginform').serialize(),
             success: function (result) {
                 if (result.r == 'ok') {
-                    window.location.href = '/admin/work'
+                    window.location.href = '/admin/work';
 
                 }
             }
