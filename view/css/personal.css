@@ -1,0 +1,74 @@
+.tonter{
+    width: 1140px;	
+    margin: 0 auto;
+    }
+    
+    .nav>li>a:focus, .nav>li>a:hover {
+        text-decoration: none;
+        background-color: transparent;
+        color: #333333;
+    }
+    
+    .nav>li>a{
+        color: #777777;
+        font-size: 16px;
+    }
+    
+    .nav-bar{
+        width: 100%;
+        background-color: rgb(252,252,252);
+    }
+
+    .information{
+        height: 300px;
+        width: 1300px;
+        margin:0 auto;
+        margin-top: 10px;
+        background-color: aqua;
+    }
+
+    .layui-tab{
+        width: 1300px;
+        margin: 0 auto;
+        margin-top: 10px;
+    }
+
+    .layui-tab-title{
+        text-align: center;
+    }
+
+    .layui-tab-title li{
+        width: 325px;
+    }
+
+
+    .conterone{
+        height: 400px;
+        /* background-color: chocolate; */
+        padding: 20px;
+        margin-top:5px; 
+    }
+
+    .conterimg{
+        height: 200px;
+        padding: 5px;
+        background-image: url('../image/index.jpg');
+        background-size: cover;
+    }
+
+    .imageone{
+        margin-top: 10px;
+    }
+
+    .imageone:first-child{
+        font-size: 20px;
+        font-weight: 700;
+    }
+
+    .informationtabel{
+        height: 500px;
+        width: 1000px;
+        margin:  0 auto;
+        /* background-color: aqua; */
+        padding: 0 20px;
+    }

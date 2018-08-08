@@ -109,8 +109,9 @@ server.post('/upload', upload.array('editimages'), (req, res) => {
 
 //客户端路由
 // 首页
-server.use('/',require('./module/index')())
-
+server.use('/',require('./module/index')());
+// 用户个人中心
+server.use('/user',require('./module/user')());
 // 静态资源托管
 server.use('/uploads', express.static('uploads'));
 server.use(express.static('view'));
