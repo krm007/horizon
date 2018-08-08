@@ -83,8 +83,9 @@ server.use('/admin/login',require('./module/admin/login')());
 //作品的分类信息
 server.use('/admin/work',require('./module/admin/work')());
 //用户上传的文件信息
-// server.use('/admin/post',require('./module/admin/post')());
-
+server.use('/admin/post',require('./module/admin/post')());
+//公告信息
+server.use('/admin/inform',require('./module/admin/inform')());
 
 //公用的上传文件的upload，接收批量上传图片
 //处理不允许的类型

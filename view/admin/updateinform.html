@@ -1,0 +1,57 @@
+<% include header.html %>
+    <!-- 内容区域 -->
+    <div class="layui-body">
+        <!-- 内容主体区域 -->
+        <div style="padding: 15px;">
+            <ul class="layui-nav layui-bg-green">
+                <li>首页</li>
+                <span>>>>></span>
+                <li>公告信息</li>
+                <span>>>>></span>
+                <li>修改公告</li>
+            </ul>
+            <!-- 表格区域   -->
+            <form class="layui-form " action="" id="updateinform">
+                <input type="hidden" name="inid" id="inid" value="<%=inform.inid%>">
+                <!-- 添加标题信息 -->
+                <div class="layui-form-item ">
+                    <label class="layui-form-label">标题</label>
+                    <div class="layui-input-inline">
+                        <input type="text" name="intitle" id="intitle" value="<%=inform.intitle%>" required lay-verify="required"  autocomplete="off"
+                            class="layui-input">
+                    </div>
+                    <!-- 提示信息 -->
+                    <div class="layui-form-mid layui-word-aux">添加标题</div>
+                </div>
+                <!-- 添加内容信息 -->
+                <div class="layui-form-item ">
+                        <h4>添加内容</h4><br>
+                        <div id="editor"><%-inform.incontent%></div>
+                        <textarea name="incontent" id="incontent" cols="30" rows="10" class="hide"><%-inform.incontent%></textarea>
+                </div>
+
+                <button type="button" class="layui-btn" lay-submit lay-filter="formDemo" id="updateinformsubmit">保存</button>
+            </form>
+
+
+        </div>
+    </div>
+
+    <% include footer.html %>
+    <script src="//unpkg.com/wangeditor/release/wangEditor.min.js"></script>
+    <script>
+        //题干的编辑器
+        var E = window.wangEditor;
+        var editor = new E('#editor');
+        // 监控变化，同步更新到 textarea
+        var $incontent = $('#incontent');
+        editor.customConfig.onchange = function (html) {
+            $incontent.val(html);
+        }
+        //开启图片上传并设置处理图片的服务器接口地址
+        editor.customConfig.uploadImgServer = '/upload';
+        //设置上传的图片名称
+        editor.customConfig.uploadFileName = 'editimages';
+        editor.create();
+
+    </script>

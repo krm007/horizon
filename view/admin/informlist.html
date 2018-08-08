@@ -1,0 +1,48 @@
+<% include header.html %> 
+        <!-- 内容区域 -->
+        <div class="layui-body">
+            <!-- 内容主体区域 -->
+            <div style="padding: 15px;">
+                <ul class="layui-nav layui-bg-green" >
+                    <li>首页</li><span>>>>></span>
+                    <li>公告信息</li>
+                   
+                </ul>
+                <!-- 表格区域   -->
+                <table class="layui-table">
+                    <colgroup>
+                      <col width="150">
+                      <col width="200">
+                      <col>
+                    </colgroup>
+                    <thead>
+                      <tr>
+                        <th>序号</th>
+                        <th>标题</th>
+                        <th>添加人</th>
+                        <th>添加时间</th>
+                        <th>操作</th>
+                      </tr> 
+                    </thead>
+                    <tbody>
+                      <%
+                      let n=0 
+                      for(let f of informlist){
+                        n++;  
+                        %>
+                      <tr>
+                        <td><%=n%></td>
+                        <td><%=f.intitle%></td>
+                        <td><%=f.username%></td>
+                        <td><%=f.addtime.toLocaleString()%></td>
+                        <td><a href="javascript:void(0)" class="delinform" inid="<%=f.inid%>">删除</a>
+                            |
+                            <a href="/admin/inform/update?inid=<%=f.inid%>">修改</a></td>
+                      </tr>
+                      <%}%>
+                    </tbody>
+                  </table>
+            </div>
+        </div>
+
+ <% include footer.html %> 
