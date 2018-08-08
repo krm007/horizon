@@ -1,18 +1,141 @@
-body{
-    background-image: url(../image/abg.jpg);
-    background-size: cover;
-}
- body h1{
-    margin-left: 50px;
-    font-weight: 900;
-}
-#bigdiv input{
-    width: 80%;
+P{
+	margin: 0;
+	padding: 0;
 }
 
-#bigdiv{
-    width: 40%;
-    height: 300px;
-    background-color: rgba(124, 117, 117, 0.5);
-    margin: 200px 100px;
+.left{
+	position: absolute;
+	top: 0px;
+	bottom: 0px;
+	left: 0px;
+	background-image: url(/image/login.jpg);
+	background-size:cover ;
+    z-index: 1;
+    padding: 0;
+}
+
+.right{
+	height: 100%;
+	position: absolute;
+	top: 0px;
+	bottom: 0px;
+	left: 0px;
+	right: 0px;
+	padding: 0;
+}
+
+.leftone{
+	position: absolute;
+	top: 0px;
+	bottom: 0px;
+	background-color: #000000;
+	z-index: -1;
+	opacity: 0.3;
+	padding: 0;
+}
+
+.contentone{
+	z-index: 10;
+	color: #ffffff;
+	font-family: "微软雅黑";
+	text-align: left;
+	margin: 300px 0px;
+	margin-left: 100px;
+	padding: 0px;
+}
+
+.contentone h1{
+	font-weight: 700;
+	font-size: 48px;
+}
+
+.contentone p{
+	font-weight: 700;
+	font-size: 24px;
+	margin-top: 50px;
+}
+
+.rightcontent{
+	text-align: center;
+	margin-top: 100px;
+}
+
+.rightcontent h2{
+	font-family: "微软雅黑";
+	font-size: 46px;
+	font-weight: 700;
+}
+
+.rightcontent p{
+	margin-top: 25px;
+	font-size: 15px;
+}
+
+.rightform{
+	width: 800px;
+	/*background-color: aqua;*/
+	height: 600px;
+	margin: 0 auto;
+	margin-top: 50px;
+}
+
+.form-group{
+	margin-top: 25px;
+}
+
+.form-group label{
+	font-family: "微软雅黑";
+	font-size: 15px;
+    font-weight: 400;
+    line-height: 1.6;
+    color: #111111;
+    background-color: #ffffff;
+}
+
+.form-control {
+    display: block;
+    width: 100%;
+    height: 40px;
+    padding: 6px 12px;
+    font-size: 15px;
+    line-height: 1.6;
+    color: #111111;
+    background-color: transparent;
+    background-image: none;
+    border: 1px solid #999999;
+    border-radius: 3px;
+    transition: border-color ease-in-out 0.15s;
+}
+
+.form-control:focus {
+    border-color: #111111;
+    outline: 0;
+    box-shadow:none;
+}
+
+.login{
+	margin-top: 25px;
+	background-color: #111111;
+	color: #ffffff;
+	
+}
+
+.rightform p{
+	margin-top: 10px;
+	text-align: center;
+	color: #999999;
+}
+
+.coder{
+	width: 150px;
+	display: inline-block;
+}
+
+.codeimg{
+	margin-top: -3px;
+}
+
+.contentone a{
+	color: #ffffff;
+	text-decoration: none;
 }

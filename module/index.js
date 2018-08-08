@@ -48,8 +48,8 @@ module.exports = function () {
             noise:0,
             background:'#dde0ab',
             color:true,
-            width:100,
-            height:34,
+            width:150,
+            height:42,
         });
         req.session.captcha = captcha.text;
         res.type('svg');
