@@ -1,0 +1,99 @@
+<% include header.html %>
+    <!-- 内容区域 -->
+    <div class="layui-body">
+        <!-- 内容主体区域 -->
+        <div style="padding: 15px;">
+            <ul class="layui-nav layui-bg-green">
+                <li>首页</li>
+                <span>>>>></span>
+                <li>作品管理</li>
+            </ul>
+            <div class="layui-form-item">
+                <label for="wid">分类</label>
+                <select name="wid" id="wid" class="form-control csearch">
+                    <option value="0">==全部==</option>
+                    <% for(let p of worklist){%>
+                        <option value="<%=p.wid%>" <%=p.wid== wid ? ' selected': ''%>>
+                            <%=p.wname%>
+                        </option>
+                        <%}%>
+                </select>
+            </div>
+            <!-- 表格区域   -->
+            <table class="layui-table">
+                <colgroup>
+                    <col width="150">
+                    <col width="200">
+                    <col>
+                </colgroup>
+                <thead>
+                    <tr>
+                        <th>序号</th>
+                        <th>分类</th>
+                        <th>标题</th>
+                        <th>作者</th>
+                        <th>添加时间</th>
+                        <th>下载次数</th>
+                        <th>点赞次数</th>
+                        <th>操作</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <%
+                      let n=0 
+                      for(let p of postlist){
+                        n++;  
+                        %>
+                        <tr>
+                            <td>
+                                <%=n%>
+                            </td>
+                            <td>
+                                <%=p.wname%>
+                            </td>
+                            <td>
+                                <%=p.ptitle%>
+                            </td>
+                            <td>
+                                <%=p.username%>
+                            </td>
+                            <td>
+                                <%=p.addtime.toLocaleString()%>
+                            </td>
+                            <td>
+                                <%=p.uploadnums%>
+                            </td>
+                            <td>
+                                <%=p.zannums%>
+                            </td>
+                            <td>
+                                <a href="javascript:void(0)" class="delpost" pid="<%=p.pid%>">删除</a>
+                            </td>
+                        </tr>
+                        <%}%>
+                </tbody>
+            </table>
+            <!-- 分页 -->
+            <nav aria-label="Page navigation">
+                    <ul class="pagination">
+                      <li>
+                        <a href="/admin/post?page=<%=page-1 < 1 ? 1:(page-1)%><%=urlext%>" aria-label="Previous">
+                          <span aria-hidden="true">&laquo;</span>
+                        </a>
+                      </li>
+                      <%for(let p = start; p <= end; p++){%>
+                      <li<%-p==page ? ' class="active"':''%>><a href="/admin/post?page=<%=p%><%=urlext%>"><%=p%></a></li>
+                      <%}%>
+                      <li>
+                        <a href="/admin/post?page=<%=page*1+1 >totalpage ? totalpage:(page*1+1)%><%=urlext%>" aria-label="Next">
+                          <span aria-hidden="true">&raquo;</span>
+                        </a>
+                      </li>
+                    </ul>
+                  </nav>
+
+
+        </div>
+    </div>
+
+    <% include footer.html %>

@@ -18,12 +18,46 @@ body{
     margin-top: 10px;
 }
 
-#addwork label{
+/* #addwork label{
     size: 1
-}
+} */
 .layui-form-label{
     width: 30px;
+    padding: 9px 1px;
+    margin-right: 5px;
 }
 .layui-btn{
     padding: 0 150px;
+}
+/* 用户发布作品 */
+#flexdiv{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+/* 公告信息 */
+#addinform{
+    margin-top: 10px;
+}
+
+#addinform label{
+    size: 1
+}
+#addinform h4{
+    margin-left: 17px;
+}
+#editor{
+    margin-left: 17px;
+}
+#addinform textarea{
+    display: none;
+}
+#updateinform textarea{
+    display: none;
+}
+.form-control{
+    width: 25%;
+}
+.addfl{
+    display: inline-block;
 }
