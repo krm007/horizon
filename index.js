@@ -112,9 +112,14 @@ server.post('/upload', upload.array('editimages'), (req, res) => {
 
 // 首页
 server.use('/',require('./module/index')());
+
 //精选中心
 server.use('/postcenter',require('./module/post')());
 
+
+
+// 用户个人中心
+server.use('/user',require('./module/user')());
 
 // 静态资源托管
 server.use('/uploads', express.static('uploads'));
