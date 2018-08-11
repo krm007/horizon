@@ -108,8 +108,13 @@ server.post('/upload', upload.array('editimages'), (req, res) => {
 
 
 //客户端路由
+
+
 // 首页
-server.use('/',require('./module/index')())
+server.use('/',require('./module/index')());
+//精选中心
+server.use('/postcenter',require('./module/post')());
+
 
 // 静态资源托管
 server.use('/uploads', express.static('uploads'));
