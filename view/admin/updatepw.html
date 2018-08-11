@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>个人管理中心</title>
+    <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/css/updatepw.css">
+</head>
+
+<body>
+    <div class="container" id=updatepwdiv>
+        <h1>欢迎<%=username%>修改个人密码</h1><br>
+
+        <form action="" id="update">
+            <div class="form-group">
+                <label for="oldpw">原密码</label>
+                <input type="password" class="form-control" name="oldpw" value="" id="oldpw" placeholder="请输入原始密码">
+            </div>
+
+            <div class="form-group">
+                <label for="passwd">新密码</label>
+                <input type="password" class="form-control" name="passwd" value="" id="passwd" placeholder="请输入新密码">
+            </div>
+
+            <div class="form-group">
+                <label for="repasswd">确认新密码</label>
+                <input type="password" class="form-control" name="repasswd" value="" id="repasswd" placeholder="请确认新密码">
+            </div><br>
+            <button type="button" class="btn btn-default update">确定</button>
+        </form>
+    </div>
+    <script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
+    <script>
+        window.onload = function () {
+            $('.update').click(function () {
+                //各种验证自己写
+
+                $.ajax({
+                    url: '/admin/login/changepw',
+                    type: 'POST',
+                    dataType: 'JSON',
+                    data: $('#update').serialize(),
+                    success: function (data) {
+                        console.log(data);
+                        if (data.r == 'ok') {
+                            window.location.href = '/admin/login/';
+                        }
+                    }
+                });
+            });
+        }
+    </script>
+
+</body>
+
+</html>
