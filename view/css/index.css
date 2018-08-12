@@ -1,18 +1,62 @@
-body{
-	background-image: url(/image/index.jpg);
-	background-size: cover;
-	color: #777;	
+*{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	text-decoration: none;
 }
 
-.large{
+.large_1{
+	background-image: url(../image/first01.jpg);
+	background-size: cover;
+	color: #777;
 	position: absolute;
+	width: 100%;
+	height: 100%;
 	top: 0;
-	bottom: 0;
 	right: 0;
 	left: 0;
-	background-color: rgba(252,252,252,0.5);
+	
+}
+.large_2{
+	width: 100%;
+    height: 100%;
+	position: absolute;
+	top: 100%;
+	background-color: aqua;
+}
+.large_3{
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top:200%;
+	background-color: bisque;
+}
+.large_4{
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top:300%;
+	background-color:rosybrown;
+}
+#fixed{
+	position: fixed;
+	left: 50px;
+	bottom:50px
+}
+#fixed>li{
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+	background-color: #777;
+	margin-top: 10px;
+	text-align: center;
+	line-height: 40px;
+	font-weight: 900;
+	color: white;
+	cursor: pointer;
 }
 
+/* 第一个页面内容star */
 .tonter{
 width: 1140px;	
 margin: 0 auto;
@@ -60,3 +104,5 @@ h1{
 	margin-bottom: 50px;
 	text-align: center;
 }
+/* 第一个页面内容end */
+
