@@ -97,7 +97,6 @@ module.exports = function () {
                 });
                 return;
             }
-            // console.log(result[0]);
 
             // 密码验证
             if (md5(rb.passwordone) != result[0].passwd) {

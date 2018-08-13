@@ -7,16 +7,25 @@
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<title>Document</title>
 	<link rel="stylesheet" href="/bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" href="/font-awesome/css/font-awesome.min.css">
 	<link rel="stylesheet" type="text/css" href="/css/index.css" />
 </head>
 
 <body>
-    <!-- 第一个页面 -->
+	<!-- 第一个页面 -->
 	<div class="large_1 div">
 		<!-- 导航 -->
 		<nav class="nav-bar">
 			<div class="tonter">
 				<div class="collapse navbar-collapse">
+					<ul class="nav navbar-nav navbar-left">
+						<li class="active" role="presentation">
+							<a href="/">
+								<i class="fa fa-camera-retro imglogo" aria-hidden="true"></i>&nbsp;&nbsp;
+								<span class="imglogo">视野</span>
+							</a>
+						</li>
+					</ul>
 					<ul class="nav navbar-nav navbar-right">
 						<li class="active" role="presentation">
 							<a href="/">首页</a>
@@ -50,40 +59,40 @@
 
 		</div>
 	</div>
-    <!-- 第二个页面 -->
+	<!-- 第二个页面 -->
 	<div class="large_2 div">
-	    <div class="tiler">
+		<div class="tiler">
 			<img src="/image/first03.jpg" />
 			<div class="tiler-overlay" data-image="/image/first03.jpg"></div>
-		  </div>
-		  
-		  <div class="tiler">
+		</div>
+
+		<div class="tiler">
 			<img src="/image/first04.jpg" />
 			<div class="tiler-overlay" data-image="/image/first04.jpg"></div>
-		  </div>
-		  
-		  <div class="tiler">
+		</div>
+
+		<div class="tiler">
 			<img src="/image/f_06.jpg" />
 			<div class="tiler-overlay" data-image="/image/f_06.jpg"></div>
-		  </div>
-		  
-		  
-		  <div class="tiler">
+		</div>
+
+
+		<div class="tiler">
 			<img src="/image/f_07.jpg" />
 			<div class="tiler-overlay" data-image="/image/f_07.jpg"></div>
-		  </div>
-		  
-		  
-		  <div class="tiler">
+		</div>
+
+
+		<div class="tiler">
 			<img src="/image/f_09.jpg" />
 			<div class="tiler-overlay" data-image="/image/f_09.jpg"></div>
-		  </div>
-		  
-		  
-		  <div class="tiler">
+		</div>
+
+
+		<div class="tiler">
 			<img src="/image/f_08.jpg" />
 			<div class="tiler-overlay" data-image="/image/f_08.jpg"></div>
-		  </div>
+		</div>
 	</div>
 
 	<!-- 第三个页面 -->
@@ -116,10 +125,10 @@
 			<span>n</span>
 			<span>k</span>
 			<span>s</span>
-		 </h1>
+		</h1>
 	</div>
 
-    <!-- 切换页面按钮 -->
+	<!-- 切换页面按钮 -->
 	<ul id="fixed">
 		<li>捕</li>
 		<li>光</li>
@@ -132,11 +141,12 @@
 <script src="/bootstrap/js/bootstrap.min.js"></script>
 <script src="/js/firstindex.js"></script>
 <script>
-	   $("#fixed>li").click(function(){
-            var n=$(this).index();
-            $("html,body").animate({
-                scrollTop:n*$(".div").height()
-            },200)
-        })
+	$("#fixed>li").click(function () {
+		var n = $(this).index();
+		$("html,body").animate({
+			scrollTop: n * $(".div").height()
+		}, 200)
+	})
 </script>
+
 </html>

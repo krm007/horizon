@@ -5,6 +5,10 @@
 	text-decoration: none;
 }
 
+.imglogo{
+	font-size: 20px;
+}
+
 .large_1{
 	background-image: url(../image/first01.jpg);
 	background-size: cover;
