@@ -11,6 +11,10 @@ module.exports = function () {
         res.render('index');
     })
 
+    router.get('/aboutus', (req, res) => {
+        res.render('aboutus');
+    })
+
     // 注册页面
     router.get('/register', (req, res) => {
         res.render('register')
