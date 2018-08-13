@@ -11,7 +11,7 @@
 </head>
 
 <body>
-
+    <!-- 第一个页面 -->
 	<div class="large_1 div">
 		<!-- 导航 -->
 		<nav class="nav-bar">
@@ -50,11 +50,76 @@
 
 		</div>
 	</div>
+    <!-- 第二个页面 -->
+	<div class="large_2 div">
+	    <div class="tiler">
+			<img src="/image/first03.jpg" />
+			<div class="tiler-overlay" data-image="/image/first03.jpg"></div>
+		  </div>
+		  
+		  <div class="tiler">
+			<img src="/image/first04.jpg" />
+			<div class="tiler-overlay" data-image="/image/first04.jpg"></div>
+		  </div>
+		  
+		  <div class="tiler">
+			<img src="/image/f_06.jpg" />
+			<div class="tiler-overlay" data-image="/image/f_06.jpg"></div>
+		  </div>
+		  
+		  
+		  <div class="tiler">
+			<img src="/image/f_07.jpg" />
+			<div class="tiler-overlay" data-image="/image/f_07.jpg"></div>
+		  </div>
+		  
+		  
+		  <div class="tiler">
+			<img src="/image/f_09.jpg" />
+			<div class="tiler-overlay" data-image="/image/f_09.jpg"></div>
+		  </div>
+		  
+		  
+		  <div class="tiler">
+			<img src="/image/f_08.jpg" />
+			<div class="tiler-overlay" data-image="/image/f_08.jpg"></div>
+		  </div>
+	</div>
 
-	<div class="large_2 div"></div>
-	<div class="large_3 div"></div>
-	<div class="large_4 div"></div>
+	<!-- 第三个页面 -->
+	<div class="large_3 div">
+		<div id="mydiv">
+			<!-- 放五张图片 -->
+			<ul class="imglist">
+				<li style="background-image:url(/image/first02.jpg );background-size: cover;"></li>
+				<li style="background-image:url(/image/first05.jpg );background-size: cover;"></li>
+				<li style="background-image:url(/image/f_01.jpg );background-size: cover;"></li>
+				<li style="background-image:url(/image/f_02.jpg );background-size: cover;"></li>
+				<li style="background-image:url(/image/f_05.jpg);background-size: cover;"></li>
+			</ul>
+			<!-- 放五个小圆点 -->
+			<ul class="btn">
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+			</ul>
+		</div>
+	</div>
+	<!-- 第四个页面 -->
+	<div class="large_4 div">
+		<h1>
+			<span>T</span>
+			<span>h</span>
+			<span>a</span>
+			<span>n</span>
+			<span>k</span>
+			<span>s</span>
+		 </h1>
+	</div>
 
+    <!-- 切换页面按钮 -->
 	<ul id="fixed">
 		<li>捕</li>
 		<li>光</li>
@@ -65,6 +130,7 @@
 </body>
 <script src="/jquery/jquery.min.js"></script>
 <script src="/bootstrap/js/bootstrap.min.js"></script>
+<script src="/js/firstindex.js"></script>
 <script>
 	   $("#fixed>li").click(function(){
             var n=$(this).index();
