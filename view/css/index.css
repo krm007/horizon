@@ -1,15 +1,15 @@
-*{
+* {
 	margin: 0;
 	padding: 0;
 	list-style: none;
 	text-decoration: none;
 }
 
-.imglogo{
+.imglogo {
 	font-size: 20px;
 }
 
-.large_1{
+.large_1 {
 	background-image: url(../image/first01.jpg);
 	background-size: cover;
 	color: #777;
@@ -19,11 +19,11 @@
 	top: 0;
 	right: 0;
 	left: 0;
-	
 }
-.large_2{
+
+.large_2 {
 	width: 100%;
-    height: 100%;
+	height: 100%;
 	position: absolute;
 	top: 100%;
 	/* background-color: aqua; */
@@ -36,19 +36,20 @@
 	margin: auto;
 }
 
-.large_3{
+.large_3 {
 	width: 100%;
 	height: 100%;
 	position: absolute;
-	top:200%;
+	top: 200%;
 	/* background-color: bisque; */
 	text-align: center;
 }
-.large_4{
+
+.large_4 {
 	width: 100%;
 	height: 100%;
 	position: absolute;
-	top:300%;
+	top: 300%;
 	/* background-color:rosybrown; */
 	margin: 0;
 	display: flex;
@@ -57,12 +58,14 @@
 	background-size: cover;
 	font-family: Montserrat, sans-serif;
 }
-#fixed{
+
+#fixed {
 	position: fixed;
 	left: 50px;
-	bottom:50px
+	bottom: 50px
 }
-#fixed>li{
+
+#fixed>li {
 	width: 40px;
 	height: 40px;
 	border-radius: 50%;
@@ -76,112 +79,113 @@
 }
 
 /* 第一个页面内容star */
-.tonter{
-width: 1140px;	
-margin: 0 auto;
+
+.tonter {
+	width: 1140px;
+	margin: 0 auto;
 }
 
-.nav>li>a:focus, .nav>li>a:hover {
-    text-decoration: none;
-    background-color: transparent;
-    color: #333333;
+.nav>li>a:focus,
+.nav>li>a:hover {
+	text-decoration: none;
+	background-color: transparent;
+	color: #333333;
 }
 
-.nav>li>a{
+.nav>li>a {
 	color: #777777;
 	font-size: 16px;
 }
 
-.nav-bar{
+.nav-bar {
 	width: 100%;
-	background-color: rgb(252,252,252);
+	background-color: rgb(252, 252, 252);
 }
 
-.content{
+.content {
 	margin: 100px 200px;
 	background-color: transparent;
 }
 
-h1{
+h1 {
 	font-size: 60px;
 	font-weight: 700;
 }
 
-#cg{
-	margin-top: 100px;	
+#cg {
+	margin-top: 100px;
 }
 
-#introduceone{
+#introduceone {
 	font-size: 30px;
 }
 
-#introducetwo{
-	font-size: 20px;	
+#introducetwo {
+	font-size: 20px;
 }
 
-.introduce{
+.introduce {
 	margin-bottom: 50px;
 	text-align: center;
 }
+
 /* 第一个页面内容end */
+
 /* 第二个页面内容star */
+
 .splitting-image {
 	background-size: 0% 0%;
 	position: relative;
 	overflow: hidden;
-  }
-  
-  .splitting-image img {
+}
+
+.splitting-image img {
 	display: block;
-  }
-  
-  @supports (--row-size: calc( 100% / 2 )) {
+}
+
+@supports (--row-size: calc( 100% / 2)) {
 	.splitting-image {
-	  background-size: cover;
-	  visibility: hidden;
-	  --row-size: calc(100% / var(--row-total));
-	  --col-size: calc(100% / var(--col-total));
+		background-size: cover;
+		visibility: hidden;
+		--row-size: calc(100% / var(--row-total));
+		--col-size: calc(100% / var(--col-total));
 	}
-  
 	.split-cell {
-	  background: inherit;
-	  position: absolute;
-	  overflow: hidden;
-	  top: calc(var(--row-size) * var(--row-index));
-	  left: calc(var(--col-size) * var(--col-index));
-	  width: calc(0.5px + var(--col-size));
-	  height: calc(0.5px + var(--row-size));
+		background: inherit;
+		position: absolute;
+		overflow: hidden;
+		top: calc(var(--row-size) * var(--row-index));
+		left: calc(var(--col-size) * var(--col-index));
+		width: calc(0.5px + var(--col-size));
+		height: calc(0.5px + var(--row-size));
 	}
-  
 	.split-cell__inner {
-	  position: absolute;
-	  visibility: visible;
-	  background: inherit;
-	  width: calc(100% * var(--col-total));
-	  height: calc(100% * var(--row-total));
-	  transform: translate(
-		calc(-1 * var(--col-size) * var(--col-index)),
-		calc(-1 * var(--row-size) * var(--row-index))
-	  );
+		position: absolute;
+		visibility: visible;
+		background: inherit;
+		width: calc(100% * var(--col-total));
+		height: calc(100% * var(--row-total));
+		transform: translate( calc(-1 * var(--col-size) * var(--col-index)), calc(-1 * var(--row-size) * var(--row-index)));
 	}
-  }
-  .tiler {
+}
+
+.tiler {
 	position: relative;
 	display: inline-block;
 	cursor: pointer;
 	visibility: hidden;
 	width: 33.3%;
 	margin: auto;
-  }
-  
-  .tiler img {
+}
+
+.tiler img {
 	display: block;
 	margin: auto;
 	max-width: 100%;
 	visibility: visible;
-  }
-  
-  .tiler-overlay {
+}
+
+.tiler-overlay {
 	background-position: center center;
 	margin: auto;
 	position: fixed;
@@ -192,16 +196,16 @@ h1{
 	max-width: 1000px;
 	max-height: 600px;
 	-webkit-perspective: 30px;
-			perspective: 30px;
-  }
-  
-  .tiler-overlay .split-cell {
+	perspective: 30px;
+}
+
+.tiler-overlay .split-cell {
 	pointer-events: none;
 	opacity: 0;
 	-webkit-transform: translateZ(-15px);
-			transform: translateZ(-15px);
+	transform: translateZ(-15px);
 	-webkit-transform-style: preserve-3d;
-			transform-style: preserve-3d;
+	transform-style: preserve-3d;
 	transition-property: opacity, -webkit-transform;
 	transition-property: transform, opacity;
 	transition-property: transform, opacity, -webkit-transform;
@@ -214,30 +218,26 @@ h1{
 	--offset-x: calc(var(--col-index) - var(--center-x));
 	--offset-y: calc(var(--row-index) - var(--center-y));
 	/* Absolute distance from center, only positive */
-	--distance-x: calc(
-	  (var(--offset-x) * var(--offset-x)) / var(--center-x)
-	);
+	--distance-x: calc( (var(--offset-x) * var(--offset-x)) / var(--center-x));
 	/* Absolute distance from center, only positive */
-	--distance-y: calc(
-	  (var(--offset-y) * var(--offset-y)) / var(--center-y)
-	);
-	transition-delay: calc( 0.1s * var(--distance-y) + 0.1s * var(--distance-x) );
-  }
-  
-  .tiler-overlay {
+	--distance-y: calc( (var(--offset-y) * var(--offset-y)) / var(--center-y));
+	transition-delay: calc( 0.1s * var(--distance-y) + 0.1s * var(--distance-x));
+}
+
+.tiler-overlay {
 	z-index: 2;
-  }
-  
-  .tiler:hover .split-cell {
+}
+
+.tiler:hover .split-cell {
 	-webkit-transform: scale(1);
-			transform: scale(1);
+	transform: scale(1);
 	opacity: 1;
-  }
-  
-  
-  
+}
+
 /* 第二个页面内容end */
+
 /* 第三个页面内容star */
+
 #mydiv {
 	position: relative;
 	text-align: center;
@@ -254,7 +254,6 @@ h1{
 	width: 90%;
 	height: 700px;
 	overflow: hidden;
-
 }
 
 /* .large_3 ul li {
@@ -277,52 +276,54 @@ h1{
 	background-color: rgb(156, 82, 82);
 	display: inline-block;
 	cursor: pointer;
-	
 }
+
 /* 第三个页面内容end */
+
 /* 第四个页面内容star */
+
 @import url("https://fonts.googleapis.com/css?family=Montserrat:400,400i,700");
 .large_4 h1 {
-  margin: auto;
-  font-size: 20vw;
-  text-align: center;
-  text-transform: uppercase;
-  color: #900048;
-  white-space: nowrap;
-  letter-spacing: -.15em;
+	margin: auto;
+	font-size: 20vw;
+	text-align: center;
+	text-transform: uppercase;
+	color: #900048;
+	white-space: nowrap;
+	letter-spacing: -.15em;
 }
 
 .large_4 span:nth-child(1) {
-  animation: blink 1s steps(1, start) 0.33s infinite;
+	animation: blink 1s steps(1, start) 0.33s infinite;
 }
 
 .large_4 span:nth-child(2) {
-  animation: blink 1s steps(1, start) 0.66s infinite;
+	animation: blink 1s steps(1, start) 0.66s infinite;
 }
 
 .large_4 span:nth-child(3) {
-  animation: blink 1s steps(1, start) 0.33s infinite;
+	animation: blink 1s steps(1, start) 0.33s infinite;
 }
 
 .large_4 span:nth-child(4) {
-  animation: blink 1s steps(1, start) 0.66s infinite;
+	animation: blink 1s steps(1, start) 0.66s infinite;
 }
 
 .large_4 span:nth-child(5) {
-  animation: blink 1s steps(1, start) 0.33s infinite;
+	animation: blink 1s steps(1, start) 0.33s infinite;
 }
 
 .large_4 span:nth-child(6) {
-  animation: blink 1s steps(1, start) 0.66s infinite;
+	animation: blink 1s steps(1, start) 0.66s infinite;
 }
 
 @keyframes blink {
-  33% {
-    color: rgb(63, 165, 120);
-  }
-  66% {
-    color: rgb(172, 148, 186);
-  }
+	33% {
+		color: rgb(63, 165, 120);
+	}
+	66% {
+		color: rgb(172, 148, 186);
+	}
 }
 
 /* 第四个页面内容end */

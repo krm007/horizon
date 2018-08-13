@@ -1,24 +1,24 @@
-P{
+P {
 	margin: 0;
 	padding: 0;
 }
 
-.h{
+.h {
 	color: red;
 }
 
-.left{
+.left {
 	position: absolute;
 	top: 0px;
 	bottom: 0px;
 	left: 0px;
 	background-image: url(/image/login.jpg);
-	background-size:cover ;
-    z-index: 1;
-    padding: 0;
+	background-size: cover;
+	z-index: 1;
+	padding: 0;
 }
 
-.right{
+.right {
 	height: 100%;
 	position: absolute;
 	top: 0px;
@@ -28,7 +28,7 @@ P{
 	padding: 0;
 }
 
-.leftone{
+.leftone {
 	position: absolute;
 	top: 0px;
 	bottom: 0px;
@@ -38,7 +38,7 @@ P{
 	padding: 0;
 }
 
-.contentone{
+.contentone {
 	z-index: 10;
 	color: #ffffff;
 	font-family: "微软雅黑";
@@ -48,34 +48,34 @@ P{
 	padding: 0px;
 }
 
-.contentone h1{
+.contentone h1 {
 	font-weight: 700;
 	font-size: 48px;
 }
 
-.contentone p{
+.contentone p {
 	font-weight: 700;
 	font-size: 24px;
 	margin-top: 50px;
 }
 
-.rightcontent{
+.rightcontent {
 	text-align: center;
 	margin-top: 100px;
 }
 
-.rightcontent h2{
+.rightcontent h2 {
 	font-family: "微软雅黑";
 	font-size: 46px;
 	font-weight: 700;
 }
 
-.rightcontent p{
+.rightcontent p {
 	margin-top: 25px;
 	font-size: 15px;
 }
 
-.rightform{
+.rightform {
 	width: 800px;
 	/*background-color: aqua;*/
 	height: 600px;
@@ -83,63 +83,62 @@ P{
 	margin-top: 50px;
 }
 
-.form-group{
+.form-group {
 	margin-top: 25px;
 }
 
-.form-group label{
+.form-group label {
 	font-family: "微软雅黑";
 	font-size: 15px;
-    font-weight: 400;
-    line-height: 1.6;
-    color: #111111;
-    background-color: #ffffff;
+	font-weight: 400;
+	line-height: 1.6;
+	color: #111111;
+	background-color: #ffffff;
 }
 
 .form-control {
-    display: block;
-    width: 100%;
-    height: 40px;
-    padding: 6px 12px;
-    font-size: 15px;
-    line-height: 1.6;
-    color: #111111;
-    background-color: transparent;
-    background-image: none;
-    border: 1px solid #999999;
-    border-radius: 3px;
-    transition: border-color ease-in-out 0.15s;
+	display: block;
+	width: 100%;
+	height: 40px;
+	padding: 6px 12px;
+	font-size: 15px;
+	line-height: 1.6;
+	color: #111111;
+	background-color: transparent;
+	background-image: none;
+	border: 1px solid #999999;
+	border-radius: 3px;
+	transition: border-color ease-in-out 0.15s;
 }
 
 .form-control:focus {
-    border-color: #111111;
-    outline: 0;
-    box-shadow:none;
+	border-color: #111111;
+	outline: 0;
+	box-shadow: none;
 }
 
-.login{
+.login {
 	margin-top: 25px;
 	background-color: #111111;
 	color: #ffffff;
-	
 }
 
-.rightform p{
+.rightform p {
 	margin-top: 10px;
 	text-align: center;
 	color: #999999;
 }
 
-.coder{
+.coder {
 	width: 150px;
 	display: inline-block;
 }
 
-.codeimg{
+.codeimg {
 	margin-top: -3px;
 }
 
-.contentone a{
+.contentone a {
 	color: #ffffff;
 	text-decoration: none;
 }
