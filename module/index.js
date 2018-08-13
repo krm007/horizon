@@ -7,33 +7,41 @@ module.exports = function () {
     let router = express.Router();
 
     // 首页
-    router.get('/',(req,res)=>{
+    router.get('/', (req, res) => {
         res.render('index');
     })
 
     // 注册页面
-    router.get('/register',(req,res)=>{
+    router.get('/register', (req, res) => {
         res.render('register')
     })
 
     // 处理注册的数据
-    router.post('/register',(req,res)=>{
+    router.post('/register', (req, res) => {
         let rb = req.body;
-        if(!rb.passwordone){
-            res.json({r:'passwd_no'});
+        if (!rb.passwordone) {
+            res.json({
+                r: 'passwd_no'
+            });
             return;
         }
         let sql = 'SELECT uid FROM user WHERE username = ? LIMIT 1';
-        mydb.query(sql,rb.username,(err,result)=>{
-            if(result.length){
-                res.json({r:'username_existed'});
-            }else{
+        mydb.query(sql, rb.username, (err, result) => {
+            if (result.length) {
+                res.json({
+                    r: 'username_existed'
+                });
+            } else {
                 let sql = 'INSERT INTO user(username,passwd,email,tel,ip,regtime) VALUES (?,?,?,?,?,?)';
-                mydb.query(sql, [rb.username, md5(rb.passwordone), rb.email, rb.tel, req.ip, new Date().toLocaleString()], (err, result)=>{
-                    if(err){
-                        res.json({r:'db_err'});
-                    }else{
-                        res.json({r:'success'});
+                mydb.query(sql, [rb.username, md5(rb.passwordone), rb.email, rb.tel, req.ip, new Date().toLocaleString()], (err, result) => {
+                    if (err) {
+                        res.json({
+                            r: 'db_err'
+                        });
+                    } else {
+                        res.json({
+                            r: 'success'
+                        });
                     }
                 });
             }
@@ -41,15 +49,15 @@ module.exports = function () {
     })
 
     // 验证码
-    router.get('/coderimg',(req,res)=>{
+    router.get('/coderimg', (req, res) => {
         var captcha = svgCaptcha.create({
-            size:4,
-            ignoreChars:'0oOliqpaPQtf',
-            noise:0,
-            background:'#dde0ab',
-            color:true,
-            width:150,
-            height:42,
+            size: 4,
+            ignoreChars: '0oOliqpaPQtf',
+            noise: 0,
+            background: '#dde0ab',
+            color: true,
+            width: 150,
+            height: 42,
         });
         req.session.captcha = captcha.text;
         res.type('svg');
@@ -57,40 +65,58 @@ module.exports = function () {
     })
 
     // 登陆页面
-    router.get('/login',(req,res)=>{
+    router.get('/login', (req, res) => {
         res.render('login');
     })
 
     // 登录验证
-    router.post('/login',(req,res)=>{
+    router.post('/login', (req, res) => {
         let rb = req.body;
         console.log(req.session.captcha);
         console.log(rb.coder);
-        if(req.session.captcha.toLowerCase() != rb.coder.toLowerCase()){
-            res.json({r:'coder_err'});
+        if (req.session.captcha.toLowerCase() != rb.coder.toLowerCase()) {
+            res.json({
+                r: 'coder_err'
+            });
             return;
         }
         let sql = 'SELECT uid, username, passwd, tel FROM user WHERE username = ? OR tel = ? LIMIT 1';
-        mydb.query(sql,[rb.username, rb.username],(err,result)=>{
-
-            if(err){
+        mydb.query(sql, [rb.username, rb.username], (err, result) => {
+            req.session.username = result[0].username;
+            if (err) {
                 console.log(err)
             }
             // 账号验证
-            if(!result.length){
-                res.json({r:'not_exist'});
+            if (!result.length) {
+                res.json({
+                    r: 'not_exist'
+                });
                 return;
             }
-            console.log(result[0]);
-            
+            // console.log(result[0]);
+
             // 密码验证
-            if(md5(rb.passwordone) !=result[0].passwd){
-                res.json({r:'pw_err'});
+            if (md5(rb.passwordone) != result[0].passwd) {
+                res.json({
+                    r: 'pw_err'
+                });
                 return;
-            }else{
-                res.json({r:'success'});
+            } else {
+                res.json({
+                    r: 'success'
+                });
             }
+            console.log(req.session.username);
+            
         })
     })
+
+    // 退出登录
+    router.get('/logout',(req,res)=>{
+        //清除session信息，跳转登录页面
+        delete req.session.username;
+        res.redirect('/login');
+    });
+    
     return router;
 }

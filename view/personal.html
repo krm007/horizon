@@ -34,7 +34,7 @@
                         <a href="register">修改密码</a>
                     </li>
                     <li role="presentation">
-                        <a href="/login">退出登录</a>
+                        <a href="/logout">退出登录</a>
                     </li>
                 </ul>
             </div>
@@ -43,7 +43,10 @@
 
     <div class="content">
         <div class="information">
-            
+            <h1>
+                欢迎您：
+                <%=r%>
+            </h1>
         </div>
 
         <div class="layui-tab layui-tab-brief" lay-filter="docDemoTabBrief">
@@ -104,73 +107,68 @@
 
                 <div class="layui-tab-item">
                     <div class="row">
-                        <div class="col-sm-3 conterone">
-                            <div class="row">
-                                <div class="col-sm-12 conterimg"></div>
-                                <div>
-                                    <p class="imageone">标题</p>
-                                    <p class="imageone">分类</p>
-                                    <p class="imageone">收藏时间</p>
-                                    <p class="imageone">描述</p>
+                        <% for(let p of postlist){
+                                let imglist=[];
+                                if(p.imglist){
+                                    imglist = JSON.parse(p.imglist);
+                                }else{
+                                    imglist=["https://picsum.photos/300/405"];
+                                }
+                            %>
+                            <div class="col-sm-3 conterone">
+                                <div class="row">
+                                    <div class="col-sm-12 conterimg" style="background-image: url(<%-imglist[0].replace(/\\/g, '/')%>);"></div>
+                                    <div>
+                                        <p class="imageone">标题:
+                                            <%=p.ptitle%>
+                                        </p>
+                                        <p class="imageone">下载量：
+                                            <%=p.uploadnums%>
+                                        </p>
+                                        <p class="imageone">创建时间：
+                                            <%=p.addtime.toLocaleString()%>
+                                        </p>
+                                        <p class="imageone">描述：
+                                            <%=p.description%>
+                                        </p>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-
-                        <div class="col-sm-3 conterone">
-                            <div class="row">
-                                <div class="col-sm-12 conterimg"></div>
-                                <div>
-                                    <p class="imageone">标题</p>
-                                    <p class="imageone">分类</p>
-                                    <p class="imageone">收藏时间</p>
-                                    <p class="imageone">描述</p>
-
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-sm-3 conterone">
-                            <div class="row">
-                                <div class="col-sm-12 conterimg"></div>
-                                <div>
-                                    <p class="imageone">标题</p>
-                                    <p class="imageone">分类</p>
-                                    <p class="imageone">收藏时间</p>
-                                    <p class="imageone">描述</p>
-
-                                </div>
-                            </div>
-                        </div>
+                            <%}%>
                     </div>
-
                 </div>
 
 
                 <div class="layui-tab-item">
                     <div class="row">
-                        <div class="col-sm-3 conterone">
-                            <div class="row">
-                                <div class="col-sm-12 conterimg"></div>
-                                <div>
-                                    <p class="imageone">标题</p>
-                                    <p class="imageone">分类</p>
-                                    <p class="imageone">收藏时间</p>
-                                    <p class="imageone">描述</p>
-
+                        <% for(let p of postlist){
+                                let imglist=[];
+                                if(p.imglist){
+                                    imglist = JSON.parse(p.imglist);
+                                }else{
+                                    imglist=["https://picsum.photos/300/405"];
+                                }
+                            %>
+                            <div class="col-sm-3 conterone">
+                                <div class="row">
+                                    <div class="col-sm-12 conterimg" style="background-image: url(<%-imglist[0].replace(/\\/g, '/')%>);"></div>
+                                    <div>
+                                        <p class="imageone">标题:
+                                            <%=p.ptitle%>
+                                        </p>
+                                        <p class="imageone">下载量：
+                                            <%=p.uploadnums%>
+                                        </p>
+                                        <p class="imageone">创建时间：
+                                            <%=p.addtime.toLocaleString()%>
+                                        </p>
+                                        <p class="imageone">描述：
+                                            <%=p.description%>
+                                        </p>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="col-sm-3 conterone">
-                            <div class="row">
-                                <div class="col-sm-12 conterimg"></div>
-                                <div>
-                                    <p class="imageone">标题</p>
-                                    <p class="imageone">分类</p>
-                                    <p class="imageone">收藏时间</p>
-                                    <p class="imageone">描述</p>
-
-                                </div>
-                            </div>
-                        </div>
+                            <%}%>
                     </div>
                 </div>
 

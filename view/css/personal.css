@@ -24,7 +24,7 @@
         width: 1300px;
         margin:0 auto;
         margin-top: 10px;
-        background-color: aqua;
+        /* background-color: aqua; */
     }
 
     .layui-tab{
@@ -52,7 +52,7 @@
     .conterimg{
         height: 200px;
         padding: 5px;
-        background-image: url('../image/index.jpg');
+        /* background-image: url('../image/index.jpg'); */
         background-size: cover;
     }
 
@@ -71,4 +71,11 @@
         margin:  0 auto;
         /* background-color: aqua; */
         padding: 0 20px;
+    }
+
+    .information h1{
+        text-align: center;
+        line-height: 300px;
+        font-size: 60px;
+        font-weight:700
     }
